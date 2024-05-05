@@ -1,0 +1,9 @@
+const mongoose = require('mongoose')
+
+const CommunityDataTable = new mongoose.Schema({
+    username: String,
+    comment: String
+})
+
+const CommunityDataModel = mongoose.model("CommunityData", CommunityDataTable)
+module.exports = CommunityDataModel
