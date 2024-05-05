@@ -61,6 +61,10 @@ function Signup() {
       setErrorMessage('Email already exists!');
       return;
     }
+    else if(username===''||password===''||confirmPassword===''||email===''||fullName==='')
+    {
+      return;
+    }
     else {
       // Log form data before making the POST request
       console.log('Form Data:', { username, password, fullName, email });
@@ -156,135 +160,128 @@ function Signup() {
 
   return (
     <div className="mainc">
-      <Nav />
-      <div className="row px-0">
-        <div className="col-lg-6 px-0">
-          <img src={mainImgSu} alt="Login Main Img Not Displayed" className="img-fluid" />
-        </div>
-        <div className="col-lg-6 mt-3">
-          {/* <div class="animated-text">
-            <span class="letter">U</span>
-            <span class="letter">n</span>
-            <span class="letter">l</span>
-            <span class="letter">o</span>
-            <span class="letter">c</span>
-            <span class="letter">k</span>
-            <span class="letter">&nbsp;</span>
-            <span class="letter">y</span>
-            <span class="letter">o</span>
-            <span class="letter">u</span>
-            <span class="letter">r</span>
-            <span class="letter">&nbsp;</span>
-            <span class="letter">i</span>
-            <span class="letter">m</span>
-            <span class="letter">a</span>
-            <span class="letter">g</span>
-            <span class="letter">i</span>
-            <span class="letter">n</span>
-            <span class="letter">a</span>
-            <span class="letter">t</span>
-            <span class="letter">i</span>
-            <span class="letter">o</span>
-            <span class="letter">n</span>
-          </div> */}
-
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title mb-3">Sign Up</h5>
-              <h6 className="mb-4">Already have an account? <a href="/Login">Log In!</a></h6>
-              <form onSubmit={handleSubmit}>
-                <div className="row mb-3">
-                  <div className="col-md-6">
-                    <label htmlFor="username" className="form-label">Username</label>
-                    <div className="mb-3 d-flex align-items-center">
-                      <input
-                        type="text"
-                        className={`form-control ${usernameBorderColor === 'red' ? 'thick-border' : ''}`}
-                        id="username"
-                        value={username}
-                        placeholder="Enter your username"
-                        onChange={handleUsernameChange}
-                        onBlur={handleUsernameBlur}
-                        style={{ borderColor: usernameBorderColor }}
-                      />
-                       {warningimgu && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="fullname" className="form-label">Full Name</label>
-                    <div className="mb-3 d-flex align-items-center">
-                      <input
-                        type="text"
-                        className={`form-control ${nameBorderColor === 'red' ? 'thick-border' : ''}`}
-                        id="name"
-                        value={fullName}
-                        placeholder="Enter your full name"
-                        onChange={handleNameChange}
-                        onBlur={handleNameBlur}
-                        style={{ borderColor: nameBorderColor }}
-                      />
-                       {warningimgn && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
-                    </div>
-                  </div>
-                </div>
-                <div className="row mb-3">
-                  <div className="col-md-6">
-                    <label htmlFor="email" className="form-label">Email Address</label>
-                    <div className="mb-3 d-flex align-items-center">
-                      <input
-                        type="email"
-                        className={`form-control ${emailBorderColor === 'red' ? 'thick-border' : ''}`}
-                        id="email"
-                        value={email}
-                        placeholder="Enter your email"
-                        onChange={handleEmailChange}
-                        onBlur={handleEmailBlur}
-                        style={{ borderColor: emailBorderColor }}
-                      />
-                       {warningimge && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <div className="mb-3 d-flex align-items-center">
-                      <input
-                        type="password"
-                        className={`form-control ${passwordBorderColor === 'red' ? 'thick-border' : ''}`}
-                        id="password"
-                        value={password}
-                        placeholder="Enter your password"
-                        onChange={handlePasswordChange}
-                        onBlur={handlePasswordBlur}
-                        style={{ borderColor: passwordBorderColor }}
-                      />
-                       {warningimgp && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
-                    </div>
-                  </div>
-                </div>
-                  <div className="col-md-6">
-                    <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-                    <div className="mb-3 d-flex align-items-center">
-                      <input
-                        type="password"
-                        className={`form-control ${confirmPasswordBorderColor === 'red' ? 'thick-border' : ''}`}
-                        id="confirmPassword"
-                        value={confirmPassword}
-                        placeholder="Re-enter your password"
-                        onChange={handleConfirmPasswordChange}
-                        onBlur={handleConfirmPasswordBlur}
-                        style={{ borderColor: confirmPasswordBorderColor }}
-                      />
-                       {warningimgcp && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
-                    </div>
-                </div>
-                {errorMessage && <p className="text-danger">{errorMessage}</p>}
-                <button type="submit" className="btn btn-primary">Create Account</button>
-              </form>
-            </div>
+  <Nav />
+  <div className="row px-0">
+    <div className="col-lg-6 px-0">
+      <img src={mainImgSu} alt="Login Main Img Not Displayed" className="img-fluid" />
+    </div>
+    <div className="col-lg-6 mt-3">
+      <div className="card">
+        <div className="card-body">
+          <div className='signup-heading'>
+            <h4 className="card-title mb-3">Sign Up</h4>
+            <h6 className="mb-4">Already have an account? <a href="/Login">Log In!</a></h6>
           </div>
+          <form onSubmit={handleSubmit}>
+            <div className="row mb-3">
+              <div className="col-md-6">
+                <div className='username-label2'>
+                  <label htmlFor="username" className="form-label">Username</label>
+                </div>
+                <div className="mb-3 d-flex align-items-center">
+                  <input
+                    type="text"
+                    className={`form-control ${usernameBorderColor === 'red' ? 'thick-border' : ''}`}
+                    id="username"
+                    value={username}
+                    placeholder="Enter your username"
+                    onChange={handleUsernameChange}
+                    onBlur={handleUsernameBlur}
+                    style={{ borderColor: usernameBorderColor }}
+                  />
+                  {warningimgu && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className='right-labels-su'>
+                  <label htmlFor="fullname" className="form-label">Full Name</label>
+                </div>
+                <div className="mb-3 d-flex align-items-center">
+                  <input
+                    type="text"
+                    className={`form-control ${nameBorderColor === 'red' ? 'thick-border' : ''}`}
+                    id="name"
+                    value={fullName}
+                    placeholder="Enter your full name"
+                    onChange={handleNameChange}
+                    onBlur={handleNameBlur}
+                    style={{ borderColor: nameBorderColor }}
+                  />
+                  {warningimgn && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
+                </div>
+              </div>
+            </div>
+            <div className="row mb-3">
+              <div className="col-md-6">
+                <div className='username-label2'>
+                  <label htmlFor="email" className="form-label">Email Address</label>
+                </div>
+                <div className="mb-3 d-flex align-items-center">
+                  <input
+                    type="email"
+                    className={`form-control ${emailBorderColor === 'red' ? 'thick-border' : ''}`}
+                    id="email"
+                    value={email}
+                    placeholder="Enter your email"
+                    onChange={handleEmailChange}
+                    onBlur={handleEmailBlur}
+                    style={{ borderColor: emailBorderColor }}
+                  />
+                  {warningimge && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className='right-labels-su'>
+                  <label htmlFor="password" className="form-label">Password</label>
+                </div>
+                <div className="mb-3 d-flex align-items-center">
+                  <input
+                    type="password"
+                    className={`form-control ${passwordBorderColor === 'red' ? 'thick-border' : ''}`}
+                    id="password"
+                    value={password}
+                    placeholder="Enter your password"
+                    onChange={handlePasswordChange}
+                    onBlur={handlePasswordBlur}
+                    style={{ borderColor: passwordBorderColor }}
+                  />
+                  {warningimgp && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
+                </div>
+              </div>
+            </div>
+            <div className="row mb-3">
+              <div className="col-md-6">
+                <div className='username-label2'>
+                  <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
+                </div>
+                <div className="mb-3 d-flex align-items-center">
+                  <input
+                    type="password"
+                    className={`form-control ${confirmPasswordBorderColor === 'red' ? 'thick-border' : ''}`}
+                    id="confirmPassword"
+                    value={confirmPassword}
+                    placeholder="Re-enter your password"
+                    onChange={handleConfirmPasswordChange}
+                    onBlur={handleConfirmPasswordBlur}
+                    style={{ borderColor: confirmPasswordBorderColor }}
+                  />
+                  {warningimgcp && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
+                </div>
+              </div>
+            </div>
+            {errorMessage && <p className="text-danger">{errorMessage}</p>}
+            <div class="d-grid">
+              <button type="submit" className="btn btn-primary">Create Account</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+
   );
 }
 
