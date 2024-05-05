@@ -1,0 +1,36 @@
+/* Afroze css code */
+.display{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top:350px;
+    position: absolute;
+    color: white;
+}
+.bookscard{
+    background-color: #282424;
+    position: absolute;
+    width: 82%; 
+    height: 50%;
+    top:55%;
+    left:18%;
+}
+.sidebar{
+    position: absolute;
+    top:20px;
+    left: 30px;
+    height: auto;
+    color: white;
+}
+.transparent-btn {
+    color: white; /* Text color */
+}
+.transparent-btn:hover {
+    border-color: #282424;
+}
+.hortizontal-line{
+    height: 2px; /* Set the height of the line */
+    width: 170%; /* Set the width of the line */
+    /* margin: 10px auto;  */
+    background-color: #ffff;
+}

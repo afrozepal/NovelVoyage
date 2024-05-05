@@ -1,0 +1,74 @@
+.mainheader{
+    background-color: #282424;
+    height:50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.nav-link , .navbar-brand{
+    color: white;
+}
+.locset{
+    padding-left: 70px;
+}
+.background-container {
+    position: relative;
+}
+
+.mainheader {
+    z-index: 2; /* Ensure the navbar is on top */
+}
+
+.downside {
+    background-color: #282424; /* Your downside background color */
+    background-image: url('../assets/navbg.png'); /* Replace 'your_image_url_here' with the URL of your image */
+    background-size: 30% auto; /* Adjust the width as needed */
+    background-position: right 5px top;
+    background-repeat: no-repeat;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Ensure the downside is behind the navbar */
+    color: white;
+}
+.dh1 {
+    margin-top: 0; /* Reset top margin */
+    position: absolute; /* Position the heading absolutely */
+    top: 30%; /* Position the heading at 50% from the top of its containing element */
+    left: 10%; /* Position the heading at 50% from the left of its containing element */
+}
+
+.dcont {
+    margin-top: 0; /* Reset top margin */
+    position: absolute; /* Position the heading absolutely */
+    top: 45%; /* Position the heading at 50% from the top of its containing element */
+    left: 12%; /* Position the heading at 50% from the left of its containing element */
+}
+.dSearch{
+    margin-top: 0;
+    position: absolute;
+    top: 55%; 
+    left: 12%;
+}
+
+
+.mainheader {
+    background-color: transparent;
+}
+
+.cbtn{
+    border-radius: 30px;
+    width:80px;
+    margin-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.imgcss{
+    margin-top: 30%;
+    width:300px;
+    height: auto;
+}
+
