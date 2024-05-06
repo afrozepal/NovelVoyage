@@ -20,7 +20,7 @@ export function fetchUsers() {
 
 export async function addUser(username, password, name, email) {
     try {
-        const read_count=0;
+        const read_count='';
         const liked_books='';
         const saved_books='';
         const response = await fetch('http://localhost:5000/api/userslala', {
