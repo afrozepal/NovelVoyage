@@ -175,13 +175,13 @@ function Login() {
                     />
                     {warningimgp && (<img src={warningicon} alt='Warning Icon' className='warning ml-2' />)}
                   </div>
-                  <div class="d-grid">
+                  <div className="d-grid">
                     <button type="submit" className="btn btn-primary">Login</button>
                   </div>
-                  <div class="container mt-2">
-                    <div class="row justify-content-right align-items-right" >
-                      <div class="col-auto">
-                        <span class="content forgot-password"><a href='/ForgotPassword'>Forgot Password?</a></span>
+                  <div className="container mt-2">
+                    <div className="row justify-content-right align-items-right" >
+                      <div className="col-auto">
+                        <span className="content forgot-password"><a href='/ForgotPassword'>Forgot Password?</a></span>
                       </div>
                     </div>
                   </div>
