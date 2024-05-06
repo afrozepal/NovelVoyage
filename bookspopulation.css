@@ -1,0 +1,59 @@
+.populatedpage{
+    background-color: black;
+}
+
+.container2 {
+    background-color:#da8c33;
+    width: 70%; /* Adjust the width of the container as needed */
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /* to place content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 20px;
+    border: 50px solid #E5B072;
+}
+
+.books-container {
+    padding: 20px;
+}
+
+.books-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.books-table th, .books-table td {
+    padding: 8px;
+    text-align: left;
+    color: white;
+}
+
+.books-table th {
+    color: white;
+}
+
+.books-table tr:hover {
+    background-color: yellowgreen;
+}
+
+.search-container {
+    background-color: #E5B072; /* Background color */
+    border: 1px solid #E5B072; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding */
+    width: 70%; /* Width of the container */
+    margin: auto; /* Center horizontally */
+    margin-top: 50vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a slight elevation */
+}
+
+.search-container input[type="text"] {
+    width: calc(100% - 40px); /* Adjust input width */
+    padding: 8px; /* Padding for input */
+    border: 1px solid #E5B072; /* Border for input */
+    border-radius: 3px; /* Rounded corners for input */
+    margin-right: 10px; /* Margin between input and button */
+}
