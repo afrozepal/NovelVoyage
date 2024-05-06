@@ -46,11 +46,12 @@
     top: 45%; /* Position the heading at 50% from the top of its containing element */
     left: 12%; /* Position the heading at 50% from the left of its containing element */
 }
-.dSearch{
+.dBooksView{
     margin-top: 0;
     position: absolute;
     top: 55%; 
     left: 12%;
+    color: yellow;
 }
 
 
@@ -72,3 +73,24 @@
     height: auto;
 }
 
+.custom-link {
+    color: yellow;
+    text-decoration: none; /* Remove default underline */
+}
+
+.custom-link:hover {
+    color: yellowgreen;
+    text-decoration: none; /* Remove default underline */
+}
+
+
+.login-link {
+    /* Add styles specific to the login link */
+    color: white;
+    /* Add other styles as needed */
+}
+
+.login-link:hover {
+    /* Add styles for hover effect */
+    color: yellow;
+}

@@ -1,13 +1,9 @@
-import { Nav } from './Component/nav';
-import { BooksDisplay } from './Component/BooksDisplay';
 import './App.css';
+import Home from './Pages/Home'
 
 function App() {
   return (
-    <div className="App">
-      <Nav></Nav>
-      <BooksDisplay></BooksDisplay>
-    </div>
+      <Home></Home>
   );
 }
 

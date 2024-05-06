@@ -6,14 +6,16 @@
     position: absolute;
     color: white;
 }
+
 .bookscard{
     background-color: #282424;
-    position: absolute;
+    height: auto;
+    position: relative;
     width: 82%; 
-    height: 50%;
-    top:55%;
+    top:5%;
     left:18%;
 }
+
 .sidebar{
     position: absolute;
     top:20px;
@@ -21,9 +23,111 @@
     height: auto;
     color: white;
 }
+
 .transparent-btn {
     color: white; /* Text color */
 }
 .transparent-btn:hover {
     border-color: #282424;
 }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100%; /* or set a specific value */
+}
+
+
+.card3-body{
+    background-color: #E5B072;
+    color: black;
+    text-align: center;
+}
+
+.displayset{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #E5B072;
+    text-align: center;
+}
+
+/* In your CSS file */
+body {
+    background-color: black;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+.home {
+    background-color: black;
+    height: 100vh; /* Use viewport height to cover the entire screen */
+    width: 100%; /* Cover the entire width */
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+.button-like-select {
+    appearance: none;
+    border: 1px solid #282424;
+    background-color: black;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.button-like-select:focus {
+    outline: none;
+}
+
+.just-icon{
+    color:white;
+    font-size: 30px;
+}
+.just-icon:hover {
+    color: #533907; /* Change to the desired color */
+}
+
+
+.rating {
+    /* Hide the default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    /* Set the width and height to create a circle */
+    width: 27px;
+    height: 27px;
+    
+    /* Use border-radius to make it a circle */
+    border-radius: 50%;
+    
+    /* Add border for visibility */
+    border: 2px solid #533907;
+    background-color: #E5B072;
+    align-items: center;
+    /* Center the text vertically and horizontally */
+    text-align: center;
+    line-height: 20px;
+    
+    /* Add padding to prevent text from touching the border */
+    padding: 0;
+    
+    cursor: pointer;
+    margin-top: 10px; 
+
+  }
+  
+
+  .row-container {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    column-gap: 10px; /* Add gap between columns */
+}
+
+
+
+

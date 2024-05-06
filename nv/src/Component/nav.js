@@ -1,8 +1,11 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import '../App.css'
 import './styling.css'
-function Nav() {
+function Nav(props) {
+
     return (
+        
         <div className="background-container">
             <nav className="navbar navbar-expand-lg mainheader">
         <div className="container-fluid">
@@ -10,7 +13,7 @@ function Nav() {
             <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a className="navbar-brand locset" href="/">Novel Voyage</a>       
+            <a className="navbar-brand locset" href="/">Welcome {props.username} to Novel Voyage</a>       
             </div>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
@@ -19,7 +22,11 @@ function Nav() {
                 <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">Community</a>
                 </li>
-                <button type="button" className="btn btn-light cbtn">LogIn</button>
+                <div>
+                <Link to="./Login" className="nav-link login-link">LogIn</Link>
+                    </div>
+
+                {/* <Link to="/Login" className="btn btn-light cbtn" >LogIn</Link> */}
                 <button type="button" className="btn btn-light cbtn">SIGNUP</button>
             </ul>
         </div>
@@ -31,11 +38,8 @@ function Nav() {
            <div className="dcont">
             <p>Find your favorite book and read it here for free</p>
            </div>
-           <div className="dSearch">
-           <form action="/search" method="GET">
-            <input type="text" placeholder="Enter Book Name" name="q"/>
-        </form>
-
+           <div className="dBooksView">
+            <Link to="/BooksPopulation" className="custom-link" >VIEW ALL BOOKS</Link>
            </div>
         </div>
             

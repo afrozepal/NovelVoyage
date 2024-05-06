@@ -1,0 +1,303 @@
+/* .navbar{
+    background-color:rgb(40,36,36);
+    margin-bottom: 0;
+} */
+.custom-navbar{
+    background-color:rgb(40,36,36);
+    margin-bottom: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.thick-border {
+    border-width: 2px;
+}
+
+.nav-link , .navbar-brand{
+    color: white;
+}
+
+.username-label {
+    position: relative;
+    left:25%;
+    width:20%;
+}
+
+.password-label {
+    position: relative;
+    left:28%;
+    width:20%;
+}
+
+.label-left-margin {
+    margin-left: -15px; /* Adjust this value as needed */
+}
+
+.warning {
+    width: 20px;
+    height: 20px; 
+}
+
+.login-heading {
+    text-align: center;
+}
+
+.signup-heading {
+    text-align: center;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+}
+.offcanvas{
+    background-color: #3C0753;
+    color: white;
+}
+
+.container { 
+    background-color: #230B0B;
+    width: 70%; /* Adjust the width of the container as needed */
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /*to place content vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20vh; /* Adjust the distance from the top */
+}
+.container {
+    background-color: transparent; /* Remove container background color */
+    padding: 0; /* Remove container padding */
+    margin-top: 0; /* Remove margin-top */
+    margin-bottom: 0; /* Remove margin-bottom */
+}
+
+.img-fluid {
+    height: 100vh;
+    object-fit: cover; 
+    margin-top:0;
+}
+
+.arh {
+    color: white;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    margin: 20px;
+    font-family: 'Lato', sans-serif; 
+    font-weight: 400; 
+    font-size: 24px; 
+
+    width: 234px;
+    height: 24px;
+    top: 108%;
+    left: 18%
+}
+
+.imageicon{
+    width: 33px;
+    height: 30px;
+    top: 26px;
+    left: 1364px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+html, body {
+    height: 100%; /* Set the height to 100% to cover the entire viewport */
+    width:100%;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.facebook-blue{
+    color:blue !important;
+}
+
+/* Set background color for body */
+body {
+    background-color: black; /* Set the background color to black */
+}
+
+.btn1 {
+    background-color: #A91515;
+    color: white;
+    padding: 6px;
+    margin: 10px;
+
+}
+.btn2 {
+    background-color:#5C1979;
+    color: white;
+    padding: 6px;
+    margin: auto;
+}
+.mainc {
+    background-color: rgb(24, 27, 34);
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust container margin and padding for responsiveness */
+
+
+/* Add media query for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        margin-top: 0; /* Remove margin-top for larger screens */
+    }
+}
+
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.username-label2 {
+    width:50%;
+    position: relative;
+    left:25%;
+}
+
+.right-labels-su {
+    width:50%;
+    position: relative;
+    left:25%;
+}
+
+
+.card2 {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    top: 15%;
+    right:20%;
+    
+    width: auto;
+    max-width: 600px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding:2%;
+}
+
+a {
+    color:black;
+}
+
+
+
+.card2-title {
+    color: rgb(0, 0, 0);
+}
+
+
+.optbtns{
+    width:50%;
+    border-radius: 20px;
+}
+
+.optbtns:hover {
+    cursor: pointer;
+    background-color: #b6b6b6 !important;
+}
+
+/* Login form styling */
+.form-label {
+    color: rgb(0, 0, 0); /* Set form label color */
+}
+
+.form-control {
+    background-color: #ffffff; /* Set form input background color */
+    border-color: #4A1919; 
+    color: rgb(0, 0, 0); 
+    width: 50%; 
+    margin: auto; 
+}
+
+.btn-primary {
+    background-color: #e6a356;
+    border-color: #E5B072;
+    width: 50%;
+    border-radius:20px;
+    margin: auto; 
+}
+
+.btn-primary:hover {
+    background-color: #e6b985;
+    border-color: #ebc59b;
+    width: 50%; 
+    margin: auto; 
+}
+
+.warning {
+    width: 20px; 
+    height: 20px;
+    position: relative;
+    right:20%;
+}
+
+.animated-text {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size:40px;
+    font-style: normal;
+    color:#f9f9f9;
+}
+
+.animated-text {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size:40px;
+    font-style: normal;
+    color:#f9f9f9;
+}
+
+.letter {
+    opacity: 0;
+    animation: write 1s linear forwards;
+}
+
+@keyframes write {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+.letter:nth-child(1) { animation-delay: 0.1s; }
+.letter:nth-child(2) { animation-delay: 0.2s; }
+.letter:nth-child(3) { animation-delay: 0.3s; }
+.letter:nth-child(4) { animation-delay: 0.4s; }
+.letter:nth-child(5) { animation-delay: 0.5s; }
+.letter:nth-child(6) { animation-delay: 0.6s; }
+.letter:nth-child(7) { animation-delay: 0.7s; }
+.letter:nth-child(8) { animation-delay: 0.8s; }
+.letter:nth-child(9) { animation-delay: 0.9s; }
+.letter:nth-child(10) { animation-delay: 1s; }
+.letter:nth-child(11) { animation-delay: 1.1s; }
+.letter:nth-child(12) { animation-delay: 1.2s; }
+.letter:nth-child(13) { animation-delay: 1.3s; }
+.letter:nth-child(14) { animation-delay: 1.4s; }
+.letter:nth-child(15) { animation-delay: 1.5s; }
+.letter:nth-child(16) { animation-delay: 1.6s; }
+.letter:nth-child(17) { animation-delay: 1.7s; }
+.letter:nth-child(18) { animation-delay: 1.8s; }
+.letter:nth-child(19) { animation-delay: 1.9s; }
+.letter:nth-child(20) { animation-delay: 2.0s; }
+.letter:nth-child(21) { animation-delay: 2.1s; }
+.letter:nth-child(22) { animation-delay: 2.2s; }
+.letter:nth-child(23) { animation-delay: 2.3s; }
+
+.forgot-password {
+    font-size: small;
+    color: rgb(113, 190, 235);
+}
+
