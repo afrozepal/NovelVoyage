@@ -19,9 +19,9 @@ function Nav(props) {
                 <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">Read</a>
                 </li>
-                <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Community</a>
-                </li>
+                <div>
+                <Link to="./CommunityPage" className="nav-link login-link">Community</Link>
+                    </div>
                 <div>
                 <Link to="./Login" className="nav-link login-link">LogIn</Link>
                     </div>
@@ -36,10 +36,10 @@ function Nav(props) {
            <h1 className="dh1">READ AND ADD YOUR INSIGHT</h1>
            </div>
            <div className="dcont">
-            <p>Find your favorite book and read it here for free</p>
+            <p>Find your favorite book and many more to discover. Save your favourites</p>
            </div>
            <div className="dBooksView">
-            <Link to="/BooksPopulation" className="custom-link" >VIEW ALL BOOKS</Link>
+            <Link to="/BooksPopulation" className="custom-link" >View Books By popularity</Link>
            </div>
         </div>
             
@@ -50,4 +50,3 @@ function Nav(props) {
 
 
 export {Nav}
-

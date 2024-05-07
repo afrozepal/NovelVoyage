@@ -4,6 +4,7 @@ import './displaystyling.css'
 import { FaHeart } from 'react-icons/fa';
 import { FaSave } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 function BooksDisplay(props) {
 
@@ -11,7 +12,9 @@ function BooksDisplay(props) {
     const [selectedBook, setSelectedBook] = useState(null);
     const [selectedGenre, setSelectedGenre] = useState("");
     const id = props.userId;
-    console.log("write now id is , " , id);
+    const name=props.username;
+
+    // console.log("write now id is , " , id ,name);
 
     const populateBooks = () => {
         axios.get('http://localhost:5000/getbooks')
@@ -21,6 +24,8 @@ function BooksDisplay(props) {
             })
             .catch(err => console.error('Error fetching data:', err));
     };
+
+
 
     const handleLike = (bookId) => {
         axios.put(`http://localhost:5000/updateLike/${bookId}`)
@@ -33,6 +38,10 @@ function BooksDisplay(props) {
     useEffect(() => {
         populateBooks();
     }, []);
+/////////////////////////////sam
+   
+    /////////////////////////
+
 
     const handleDescriptionClick = (book) => {
         setSelectedBook(book);
@@ -67,7 +76,7 @@ function BooksDisplay(props) {
             .then(response => {
                 console.log('Book saved successfully:', response.data);
             })
-            .catch(err => console.error('Error updating like:', err));
+            .catch(err => console.error('Error updating library:', err));
     };
 
     const handleRead = (bookId,id) => {
@@ -102,6 +111,7 @@ function BooksDisplay(props) {
                             </select>
                         </div>
                     </div>
+                    <Link to={`/Library/${id}/${encodeURIComponent(name)}`} className="linkoflib" >MY LIBRARY</Link>
                         </div>
                     </div>
                 </div>

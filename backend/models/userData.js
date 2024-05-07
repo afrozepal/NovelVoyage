@@ -5,11 +5,10 @@ const userSchema = new mongoose.Schema({
   password: String,
   name: String,
   email: String,
-  liked_books:String,
-  saved_books:String,
-  read_count:String,
-  
-}, { collection: 'userData' });
+  liked_books: { type: String, default: "" },
+  read_count: { type: String, default: "" },
+  saved_books: { type: String, default: "" },
+}, { collection: 'userData', versionKey:false });
 
 const User = mongoose.model('User', userSchema);
 

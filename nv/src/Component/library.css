@@ -1,0 +1,31 @@
+.display2{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top:400px;
+    position: absolute;
+    color: white;
+}
+.savedbookscard{
+    background-color: #282424;
+    height: auto;
+    position: relative;
+    width: 60%;
+    left:20%;
+    top:5%;
+}
+
+.savedbookh{
+    text-align: center;
+}
+
+.unsave-icon{
+    color:white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.unsave-icon:hover{
+    color: #533907; /* Change to the desired color */
+}

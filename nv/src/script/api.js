@@ -20,12 +20,15 @@ export function fetchUsers() {
 
 export async function addUser(username, password, name, email) {
     try {
+        const read_count='';
+        const liked_books='';
+        const saved_books='';
         const response = await fetch('http://localhost:5000/api/userslala', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ username, password, email, name}) // Adjust parameter name to match server-side code
+          body: JSON.stringify({ username, password, email, name, liked_books, read_count, saved_books}) 
         });
     
         if (!response.ok) {
@@ -40,4 +43,24 @@ export async function addUser(username, password, name, email) {
       }
 }
   
-  
+export async function updatePassword(username, password) {
+  try {
+    const response = await fetch(`http://localhost:5000/api/userslala/${username}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ password }) 
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    console.log('Password updated successfully');
+    return response.json(); // Return the response data (the updated user)
+  } catch (error) {
+    console.error('Error updating password:', error);
+    throw error; // Re-throw the error to be handled by the calling function
+  }
+}

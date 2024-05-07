@@ -37,6 +37,9 @@ function BooksTable() {
         setSearchQuery(e.target.value);
     };
 
+
+
+
     return (
         <div>
             <div className="search-container">
@@ -55,17 +58,21 @@ function BooksTable() {
                                     <th scope="col">Title <sub>pages</sub> </th>
                                     <th scope="col">Author</th>
                                     <th scope="col">Genre</th>
+                                    <th scope="col">Published Year</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {filteredBooks.map((book, index) => (
-                                    <tr key={index}>
-                                        <th scope="row">{index + 1}</th>
-                                        <td>{book.title} <sub>{book.num_pages}</sub> </td>
-                                        <td>{book.author}</td>
-                                        <td>{book.Genre}</td>
-                                    </tr>
-                                ))}
+                                {filteredBooks
+                                    .sort((a, b) => b.likes - a.likes) // Sort the books by likes in descending order
+                                    .map((book, index) => (
+                                        <tr key={index}>
+                                            <th scope="row">{index + 1}</th>
+                                            <td>{book.title} <sub>{book.num_pages}</sub></td>
+                                            <td>{book.author}</td>
+                                            <td>{book.Genre}</td>
+                                            <td>{book.published_year}</td>
+                                        </tr>
+                                    ))}
                             </tbody>
                         </table>
                     )}

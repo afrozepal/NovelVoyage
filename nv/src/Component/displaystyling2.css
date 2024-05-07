@@ -1,0 +1,35 @@
+.dh12 {
+    margin-top: 0; /* Reset top margin */
+    position: absolute; /* Position the heading absolutely */
+    top: 30%; /* Position the heading at 50% from the top of its containing element */
+    left: 10%; /* Position the heading at 50% from the left of its containing element */
+}
+
+.dcont2 {
+    margin-top: 0; /* Reset top margin */
+    position: absolute; /* Position the heading absolutely */
+    top: 45%; /* Position the heading at 50% from the top of its containing element */
+    left: 12%; /* Position the heading at 50% from the left of its containing element */
+}
+.downside2 {
+    background-color: #282424; /* Your downside background color */
+    background-image: url('../assets/navbg.png'); /* Replace 'your_image_url_here' with the URL of your image */
+    background-size: 30% auto; /* Adjust the width as needed */
+    background-position: right 5px top;
+    background-repeat: no-repeat;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Ensure the downside is behind the navbar */
+    color: white;
+}
+.sidebar2{
+    position: absolute;
+    top:20px;
+    left: 30px;
+    height: auto;
+    color: white;
+    margin-top: 470px;
+}
