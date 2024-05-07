@@ -7,7 +7,7 @@ const Library = () => {
   const { userId ,username } = useParams();
 
   return (
-    <div className="home">
+    <div>
       <Nav username={username} ></Nav>
       <Mysavedbooks userId={userId} username={username} ></Mysavedbooks>
     </div>
