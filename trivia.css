@@ -1,0 +1,22 @@
+.dabba{
+    width: 900px;
+}
+body{
+    background-color: #282424;
+}
+.andar-wala-dabba{
+    width: 830px;
+    background-color: #282424;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.thora-margin-do{
+    padding: 20px;
+}
+.button-margin{
+    margin-left: 350px;
+}
+.text-ka-design{
+    padding: 10px;
+    margin-top: 20px;
+}
