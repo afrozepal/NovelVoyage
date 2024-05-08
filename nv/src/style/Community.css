@@ -28,6 +28,7 @@ body{
 
 .section-design{
     border-radius: 10px;
+    background-color: black;
 }
 
 .bold-karo{
@@ -49,4 +50,17 @@ body{
 }
 .comment-section{
     margin-top: 20px;
+}
+
+.TextUsername{
+    font-weight: bold;
+    color: orange; 
+}
+.image-setting{
+    height: 200px;
+    width: 150px;
+    margin-left: 20px;
+}
+.post-btn{
+    margin-left: 380px;
 }

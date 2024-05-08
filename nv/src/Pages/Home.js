@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Nav username={username} ></Nav>
+      <Nav  userId={userId} username={username} ></Nav>
       <BooksDisplay userId={userId} username={username} ></BooksDisplay>
     </div>
   );

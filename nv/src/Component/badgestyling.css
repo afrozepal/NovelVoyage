@@ -2,4 +2,14 @@
     margin-top: 350px; /* Adjust this value according to your navbar height */
     margin-left: 300px;
     padding:50px;
+    background-color: white;
+  }
+  
+  .design{
+    margin-left: 100px;
+    margin-right: 100px; 
+    background-color:#282424;
+  }
+  .extra-stuff{
+    color: orange; 
   }

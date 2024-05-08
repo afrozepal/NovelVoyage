@@ -113,6 +113,9 @@ function BooksDisplay(props) {
                     </div>
                     <Link to={`/Library/${id}/${encodeURIComponent(name)}`} className="linkoflib" >MY LIBRARY</Link>
                         </div>
+                        <div>
+                    <Link to={`/Badges/${id}/${encodeURIComponent(name)}`} className="linkoflib" >DashBoard</Link>
+                        </div>
                     </div>
                 </div>
 

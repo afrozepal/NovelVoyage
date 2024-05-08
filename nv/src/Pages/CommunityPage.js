@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import '../style/Community.css'
+import '../style/Community.css';
 import '../Component/displaystyling2.css';
 import share from '../assets/icons8-send-48.png'
 import {Nav} from '../Component/nav'
@@ -11,7 +11,7 @@ function CommunityPage() {
     const [username, setUsername] = useState('');
     const [comment, setNewComment] = useState('');
     const [thoughtText, setThoughtText] = useState('');
-    const [image, setImage] = useState(null);
+    // const [image, setImage] = useState(null);
 
     useEffect(() => {
         axios.get('http://localhost:5000/getcomments')
@@ -78,24 +78,6 @@ function CommunityPage() {
             .catch(err => console.log(err));
     };
 
-    const handleImageChange = (event) => {
-        const selectedFile = event.target.files[0];
-        setImage(selectedFile);
-    };
-
-    const handleImageUpload = () => {
-        if (image) {
-            const formData = new FormData();
-            formData.append('image', image);
-
-            axios.post('http://localhost:5000/uploadImage', formData)
-                .then((response) => {
-                    console.log(response.data); // Handle the response accordingly
-                })
-                .catch(err => console.log(err));
-        }
-    };
-
     return (
         <>
             <Nav></Nav>
@@ -117,10 +99,10 @@ function CommunityPage() {
                                 <h4>Your Communities</h4>
                                 <div className="row">
                                     <div className="column">
-                                        <Link to="/" type="button" className="btn transparent-btn d-block active">ReaderSpace</Link>
-                                        <Link to="/Community2" type="button" className="btn transparent-btn d-block">BussReads</Link>
-                                        <Link to="/Community3" type="button" className="btn transparent-btn d-block">FlowerPortal</Link>
-                                        <Link to="/Community4" type="button" className="btn transparent-btn d-block">NightGale Studio</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/CommunityPage" type="button" className="btn transparent-btn d-block active">ReaderSpace</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/Community2" type="button" className="btn transparent-btn d-block">BussReads</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/Community3" type="button" className="btn transparent-btn d-block">FlowerPortal</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/Community4" type="button" className="btn transparent-btn d-block">NightGale Studio</Link>
                                         <hr className='hortizontal-line' />
                                     </div>
                                 </div>
@@ -141,9 +123,11 @@ function CommunityPage() {
                                         <h1 className="rounded-circle img-thumbnail" style={{ width: '50px', height: '50px' }}>
                                             {com.username[0]}
                                         </h1>
-                                        <div className="col-lg-max-w-fit col-md-6 col-12 mb-4 mb-md-0">
-                                            <img className="img-fluid rounded" alt="hero" src={com.image} />
+                                        <div className="image-setting col-lg-max-w-fit col-md-6 col-12 mb-4 mb-md-0">
+                                            <p className="TextUsername">{com.username}</p>
+                                            <img className="image-setting img-fluid rounded" alt="hero" src={com.image} />
                                         </div>
+                                       
                                         <div className="text-color col-md-6 d-flex flex-column justify-content-center align-items-start">
                                             <p className="text-color mb-4">{com.comment}</p>
                                         </div>
@@ -184,13 +168,8 @@ function CommunityPage() {
                                     value={comment}
                                     onChange={handlePostChange}
                                 ></textarea>
-                                <div className="image-upload-section">
-                                    <input type="file" onChange={handleImageChange} />
-                                    <button type="button" className="btn btn-primary" onClick={handleImageUpload}>
-                                        Upload Image
-                                    </button>
-                                </div>
-                                <button type="button" className="btn btn-primary" onClick={handleSubmit}>
+                               
+                                <button type="button" className="btn text-white btn-warning post-btn" onClick={handleSubmit}>
                                     Post
                                 </button>
                             </div>

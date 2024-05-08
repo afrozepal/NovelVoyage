@@ -16,18 +16,20 @@ function Nav(props) {
             <a className="navbar-brand locset" href="/">Welcome {props.username} to Novel Voyage</a>       
             </div>
             <ul className="nav justify-content-end">
-                <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Read</a>
-                </li>
+            <div>
+            <Link to={`/${props.userId}/${encodeURIComponent(props.username)}/Triviahome`} className="nav-link login-link">Trivia</Link>
+                    </div>
                 <div>
-                <Link to="./CommunityPage" className="nav-link login-link">Community</Link>
+                <Link to={`/${props.userId}/${encodeURIComponent(props.username)}/CommunityPage`} className="nav-link login-link">Community</Link>
                     </div>
                 <div>
                 <Link to="./Login" className="nav-link login-link">LogIn</Link>
                     </div>
 
                 {/* <Link to="/Login" className="btn btn-light cbtn" >LogIn</Link> */}
-                <button type="button" className="btn btn-light cbtn">SIGNUP</button>
+                <div>
+                <Link to="./Signup" className="nav-link login-link">Signup</Link>
+                    </div>
             </ul>
         </div>
         </nav>

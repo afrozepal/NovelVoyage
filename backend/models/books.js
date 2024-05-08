@@ -2,17 +2,17 @@ const mongoose=require('mongoose')
 
 const booksSchema= new mongoose.Schema(
     {
-        title:String,
-        author:String,
-        Genre:String,
-        Image:String,
-        Description:String,
-        Published_Year:Number,
-        Num_Pages:Number,
-        Rating:Number,
-        Read:Number,
-        Like:Number,
-        Save:Number,
+        title: String,
+        author: String,
+        Genre: String,
+        Image: String,
+        description: String,
+        published_year: Number, // Ensure the field name matches exactly
+        num_pages: Number,      // Ensure the field name matches exactly
+        Rating: Number,
+        Read: Number,
+        Like: Number,
+        Save: Number,
     }
 )
 

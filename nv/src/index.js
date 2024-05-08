@@ -14,7 +14,9 @@ import CommunityPage from './Pages/CommunityPage';
 import Community2 from './Pages/Community2';
 import Community3 from './Pages/Community3';
 import Community4 from './Pages/Community4';
-
+import Trivia from './Pages/Trivia';
+import Triviahome from './Pages/Triviahome';
+import Badges from './Pages/Badges'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,12 +28,15 @@ root.render(
         <Route path="/Login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/ForgotPassword" element={<ForgotPassword/>} />
-        <Route path="/CommunityPage" element={<CommunityPage/>} />
-        <Route path="/Community2" element={<Community2/>} />
-        <Route path="/Community3" element={<Community3/>} />
-        <Route path="/Community4" element={<Community4/>} />
+        <Route path="/:userId/:username/CommunityPage" element={<CommunityPage/>} />
+        <Route path="/:userId/:username/Community2" element={<Community2/>} />
+        <Route path="/:userId/:username/Community3" element={<Community3/>} />
+        <Route path="/:userId/:username/Community4" element={<Community4/>} />
+        <Route path="/:userId/:username/Triviahome" element={<Triviahome/>} />
+        <Route path="/trivia/:bookID" element={<Trivia/>} />
         <Route path="/Home/:userId/:username" element={<Home/>} />
         <Route path="/Library/:userId/:username" element={<Library/>} />
+        <Route path="/Badges/:userId/:username" element={<Badges/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

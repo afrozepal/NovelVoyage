@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import share from '../assets/icons8-send-48.png'
-
+import {Nav} from '../Component/nav'
 
 function Community2() {
     const [CommunityData, setCommunityData] = useState([]);
@@ -78,28 +78,7 @@ function Community2() {
 
     return (
         <>
-            <div className="background-container fixed-top">
-                <nav className="navbar navbar-expand-lg mainheader">
-                    <div className="container-fluid">
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                            <a className="navbar-brand locset" href="/">Novel Voyage</a>
-                        </div>
-                        <ul className="nav justify-content-end">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Read</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Community</a>
-                            </li>
-                            <button type="button" className="btn btn-light cbtn">LogIn</button>
-                            <button type="button" className="btn btn-light cbtn">SIGNUP</button>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+            <Nav></Nav>
 
             <div className="container-fluid pt-5">
                 <div className="downside">
@@ -115,20 +94,21 @@ function Community2() {
                 <div className="row">
                     <div className="siderbardesign col-md-3">
                         <div className="siderbardesign p-3">
-                            <div className="sidebar">
+                            <div className="sidebar2">
                                 <h4>Your Communities</h4>
                                 <div className="row">
                                     <div className="column">
-                                        <Link to="/communitypage" type="button" className="btn transparent-btn d-block">ReaderSpace</Link>
-                                        <Link to="/community2" type="button" className="btn transparent-btn d-block active">BussReads</Link>
-                                        <Link to="/community3" type="button" className="btn transparent-btn d-block">FlowerPortal</Link>
-                                        <Link to="/community4" type="button" className="btn transparent-btn d-block">NightGale Studio</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/CommunityPage" type="button" className="btn transparent-btn d-block active">ReaderSpace</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/Community2" type="button" className="btn transparent-btn d-block">BussReads</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/Community3" type="button" className="btn transparent-btn d-block">FlowerPortal</Link>
+                                        <Link to="/${props.userId}/${encodeURIComponent(props.username)}/Community4" type="button" className="btn transparent-btn d-block">NightGale Studio</Link>
                                         <hr className='hortizontal-line' />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                     {/* Main Content */}
                     <div className="col-md-9 padding p-5">
@@ -144,6 +124,11 @@ function Community2() {
                                         <h1 className="rounded-circle img-thumbnail" style={{ width: '50px', height: '50px' }}>
                                             {com.username[0]}
                                         </h1>
+                                        
+                                        <div className="image-setting col-lg-max-w-fit col-md-6 col-12 mb-4 mb-md-0">
+                                        <p className="TextUsername">{com.username}</p>
+                                            <img className="image-setting img-fluid rounded" alt="hero" src={com.image} />
+                                        </div>
                                         <div className="text-color col-md-6 d-flex flex-column justify-content-center align-items-start">
                                             <p className="text-color mb-4">{com.comment}</p>
                                         </div>
@@ -186,7 +171,7 @@ function Community2() {
                                     value={comment}
                                     onChange={handlePostChange}
                                 ></textarea>
-                                <button type="button" className="btn btn-primary" onClick={handleSubmit}>
+                                <button type="button" className="btn text-white btn-warning post-btn" onClick={handleSubmit}>
                                     Post
                                 </button>
                             </div>
